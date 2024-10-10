@@ -150,8 +150,8 @@ const Footer = () => {
         <div className="flex justify-between items-center w-full sm:flex-col-reverse sm:items-start sm:pt-1">
           <div className="text-customGray text-sm xs:whitespace-nowrap xxs:whitespace-normal xs:text-xs">
             <span className="">
-              R &amp; S CONSTRUCTIONS LLC &copy; {new Date().getFullYear()} |
-              ALL RIGHTS RESERVED
+              Shumba Carpenters - Expert Roofing Solutions &copy;{" "}
+              {new Date().getFullYear()} | ALL RIGHTS RESERVED
             </span>
           </div>
 
