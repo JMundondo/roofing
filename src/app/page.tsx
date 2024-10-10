@@ -84,7 +84,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Shumba Carpenters - Professional Roofing Services in Zimbabwe
+          Shumba Carpenters Professional Roofing Services in Zimbabwe
         </title>
         <meta
           name="description"
@@ -123,7 +123,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2">
               <MapPin size={20} />
-              <span>Harare, Zimbabwe</span>
+              <span>Harare Zimbabwe</span>
             </div>
           </div>
         </section>
@@ -136,7 +136,7 @@ export default function Home() {
                 Welcome to Shumba Carpenters
               </h1>
               <p className="text-gray-600 text-lg mb-8">
-                Since 2011, we've been providing top-quality roofing solutions
+                Since 2011, we have been providing top-quality roofing solutions
                 to homes and businesses across Zimbabwe. Our commitment to
                 excellence and customer satisfaction has made us one of the most
                 trusted names in the industry.

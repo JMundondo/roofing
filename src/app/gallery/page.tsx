@@ -3,6 +3,7 @@
 import { Monda, Righteous, Roboto } from "next/font/google";
 import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
+import Image from "next/image";
 
 import styles from "@/styles/Gallery.module.css";
 
