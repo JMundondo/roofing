@@ -1,0 +1,55 @@
+.homeBackgroundImage {
+    position: relative;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../../public/images/home_hero_img.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    background-blend-mode: darken;
+    opacity: 1 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center_text_title {
+    width: min(90%, 75rem);
+    margin-inline: auto;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.center_text_description {
+    text-align: left;
+    /* font-size: 2rem;
+    line-height: 1.5em; */
+    width: min(90%, 75rem);
+    margin-inline: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 1023px) {
+    .homeBackgroundImage {
+        background-attachment: scroll !important;
+        height: 40vh;
+    } 
+}
+
+@media screen and (orientation:landscape) {
+    /* .homeBackgroundImage {
+        padding: 16rem 0;
+    } */
+}
+
+
+/* @media screen and (max-width: 639px) {
+    .homeBackgroundImage {
+        background-attachment: scroll !important;
+        height: 50vh;
+    } 
+} */

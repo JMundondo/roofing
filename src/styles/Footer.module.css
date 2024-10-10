@@ -1,0 +1,31 @@
+.footer_primary_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer_link {
+    display: inline-block;
+    margin-left: 80px;
+    padding-bottom: 0.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.secondary_footer_container {
+    background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(40, 40, 40) 100%);
+}
+
+@media (max-width: 1450px) {
+    .footer_logo {
+        display: none;
+    }
+}
+
+@media (max-width: 1350px) {
+   .footer_location {
+    flex: none;
+   }
+}
