@@ -17,6 +17,8 @@ import {
   CheckCircle,
 } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const robotoFont = Roboto({
   subsets: ["latin"],
@@ -79,7 +81,27 @@ const features = [
   },
 ];
 
+const testimonials = [
+  {
+    name: "John Smith",
+    role: "Homeowner",
+    text: "Exceptional service from start to finish. The team was professional, punctual, and the quality of work exceeded our expectations.",
+  },
+  {
+    name: "Sarah Johnson",
+    role: "Business Owner",
+    text: "Shumba Carpenters handled our commercial roofing project with expertise. Their attention to detail and commitment to quality is outstanding.",
+  },
+  {
+    name: "Michael Brown",
+    role: "Property Manager",
+    text: "We've been using Shumba Carpenters for all our roofing needs. Their emergency response time and quality of work is unmatched.",
+  },
+];
+
 export default function Home() {
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
   return (
     <>
       <Head>
@@ -152,155 +174,87 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Services Overview */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2
-              className={`${robotoFont.className} text-4xl mb-12 text-center`}
-            >
-              Our Expert Services
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all"
-                >
-                  <div className="relative w-full h-48 mb-4">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover rounded-md"
-                    />
-                  </div>
-                  <h3 className={`${robotoFont.className} text-xl mb-4`}>
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Link
-                    href="/services"
-                    className="flex items-center gap-2 text-black hover:text-gray-600 transition-all"
-                  >
-                    Learn More <ArrowRight size={16} />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Why Choose Us */}
-        <section className="py-20 bg-white">
+        <section className="py-12 md:py-20 bg-white">
           <div className="container mx-auto px-4">
             <h2
-              className={`${robotoFont.className} text-4xl mb-12 text-center`}
+              className={`${robotoFont.className} text-3xl md:text-4xl mb-8 md:mb-12 text-center font-bold`}
             >
               Why Choose Shumba Carpenters
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {features.map((feature, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="text-center p-6 group hover:bg-black hover:text-white rounded-lg transition-all duration-300"
+                  className="text-center p-6 bg-gray-50 rounded-lg transition-all duration-300 hover:shadow-lg"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gray-100 rounded-full group-hover:bg-white">
-                    <feature.icon size={32} className="text-black" />
+                  <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-black rounded-full">
+                    <feature.icon size={32} className="text-white" />
                   </div>
-                  <h3 className={`${robotoFont.className} text-xl mb-2`}>
+                  <h3
+                    className={`${robotoFont.className} text-xl mb-2 font-semibold`}
+                  >
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 group-hover:text-gray-300">
-                    {feature.description}
-                  </p>
-                </div>
+                  <p className="text-gray-600">{feature.description}</p>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Recent Projects
-        
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2
-              className={`${robotoFont.className} text-4xl mb-12 text-center`}
-            >
-              Recent Projects
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {[1, 2, 3, 4].map((item) => (
-                <div
-                  key={item}
-                  className="relative h-64 group overflow-hidden rounded-lg"
-                >
-                  <Image
-                    src={`/images/projects/project${item}.jpg`}
-                    alt={`Project ${item}`}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Link
-                      href="/projects"
-                      className="text-white text-lg font-semibold"
-                    >
-                      View Project
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-12">
-              <Link href="/projects">
-                <button className="px-8 py-3 bg-black text-white font-bold rounded-md hover:bg-gray-800 transition-all">
-                  View All Projects
-                </button>
-              </Link>
-            </div>
-          </div>
-        </section>
-        
-        
-        */}
 
         {/* Testimonials */}
-        <section className="py-20 bg-white">
+        <section className="py-12 md:py-20 bg-gray-100">
           <div className="container mx-auto px-4">
             <h2
-              className={`${robotoFont.className} text-4xl mb-12 text-center`}
+              className={`${robotoFont.className} text-3xl md:text-4xl mb-8 md:mb-12 text-center font-bold`}
             >
               What Our Clients Say
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "John Smith",
-                  role: "Homeowner",
-                  text: "Exceptional service from start to finish. The team was professional, punctual, and the quality of work exceeded our expectations.",
-                },
-                {
-                  name: "Sarah Johnson",
-                  role: "Business Owner",
-                  text: "Shumba Carpenters handled our commercial roofing project with expertise. Their attention to detail and commitment to quality is outstanding.",
-                },
-                {
-                  name: "Michael Brown",
-                  role: "Property Manager",
-                  text: "We've been using Shumba Carpenters for all our roofing needs. Their emergency response time and quality of work is unmatched.",
-                },
-              ].map((testimonial, index) => (
-                <div key={index} className="bg-gray-50 p-8 rounded-lg">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
-                    <div>
-                      <h4 className="font-semibold">{testimonial.name}</h4>
-                      <p className="text-gray-600">{testimonial.role}</p>
+            <div className="relative">
+              <div className="overflow-hidden">
+                <motion.div
+                  className="flex transition-all duration-300 ease-in-out"
+                  style={{
+                    transform: `translateX(-${activeTestimonial * 100}%)`,
+                    width: `${testimonials.length * 100}%`,
+                  }}
+                >
+                  {testimonials.map((testimonial, index) => (
+                    <div key={index} className="w-full flex-shrink-0 px-4">
+                      <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
+                          <div>
+                            <h4 className="font-semibold">
+                              {testimonial.name}
+                            </h4>
+                            <p className="text-gray-600 text-sm">
+                              {testimonial.role}
+                            </p>
+                          </div>
+                        </div>
+                        <p className="text-gray-600 italic">
+                          {testimonial.text}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <p className="text-gray-600 italic">{testimonial.text}</p>
-                </div>
-              ))}
+                  ))}
+                </motion.div>
+              </div>
+              <div className="flex justify-center mt-6">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-3 h-3 rounded-full mx-1 ${
+                      index === activeTestimonial ? "bg-black" : "bg-gray-300"
+                    }`}
+                    onClick={() => setActiveTestimonial(index)}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </section>
