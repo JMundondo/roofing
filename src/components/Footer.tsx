@@ -50,7 +50,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <address className="text-base sm:text-base xxs:text-sm">
-                    2528 Ernest Kadungure , Ruwa <br /> Harare
+                    2528 harare <br /> Harare
                   </address>
                 </li>
               </ul>
@@ -69,7 +69,7 @@ const Footer = () => {
                     href="mailto:randsconstructionsllc@hotmail.com"
                     className="text-base transition-all duration-500 ease-out hover:text-customBlue sm:text-base xxs:text-sm"
                   >
-                    dkfada@HOTMAIL.COM
+                    Mkanya@HOTMAIL.COM
                   </Link>
                 </li>
                 <li>
@@ -150,8 +150,7 @@ const Footer = () => {
         <div className="flex justify-between items-center w-full sm:flex-col-reverse sm:items-start sm:pt-1">
           <div className="text-customGray text-sm xs:whitespace-nowrap xxs:whitespace-normal xs:text-xs">
             <span className="">
-              Shumba Carpenters - Expert Roofing Solutions &copy;{" "}
-              {new Date().getFullYear()} | ALL RIGHTS RESERVED
+              Mkanya &copy; {new Date().getFullYear()} | ALL RIGHTS RESERVED
             </span>
           </div>
 

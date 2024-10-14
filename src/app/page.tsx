@@ -105,12 +105,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          Shumba Carpenters Professional Roofing Services in Zimbabwe
-        </title>
+        <title>Mkanya Carpenters and Construction</title>
         <meta
           name="description"
-          content="Expert roofing solutions for residential and commercial properties in Harare, Zimbabwe. Quality craftsmanship since 2011."
+          content="Expert Roofing and Construction solutions for residential and commercial properties in Harare, Zimbabwe. Quality craftsmanship since 2011."
         />
       </Head>
 
@@ -141,7 +139,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2">
               <Mail size={20} />
-              <span>info@shumbacarpenters.com</span>
+              <span>Mkanya@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin size={20} />
@@ -155,13 +153,11 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className={`${robotoFont.className} text-4xl mb-6`}>
-                Welcome to Shumba Carpenters
+                Welcome to Mkanya Carpenters and Construction
               </h1>
               <p className="text-gray-600 text-lg mb-8">
-                Since 2011, we have been providing top-quality roofing solutions
-                to homes and businesses across Zimbabwe. Our commitment to
-                excellence and customer satisfaction has made us one of the most
-                trusted names in the industry.
+                Our commitment to excellence and customer satisfaction has made
+                us one of the most trusted names in the industry.
               </p>
               <div className="flex justify-center gap-4">
                 <Link href="/about">
@@ -180,7 +176,7 @@ export default function Home() {
             <h2
               className={`${robotoFont.className} text-3xl md:text-4xl mb-8 md:mb-12 text-center font-bold`}
             >
-              Why Choose Shumba Carpenters
+              Why Choose Mkanya Carpenters and Construction
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {features.map((feature, index) => (

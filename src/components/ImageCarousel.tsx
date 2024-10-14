@@ -8,18 +8,18 @@ const ImageCarousel = () => {
   const slides = [
     {
       image: "/images/carousel/slide1.jpeg",
-      title: "Professional Roofing Services",
-      subtitle: "Quality Craftsmanship Since 2011",
+      title: "Mkanya Carpenters and  Construction",
+      subtitle: "Custom home building",
     },
     {
       image: "/images/carousel/slide2.jpeg",
-      title: "Expert Installations",
+      title: "Commercial Construction",
       subtitle: "Residential & Commercial Solutions",
     },
     {
       image: "/images/carousel/slide3.jpeg",
-      title: "Emergency Repairs",
-      subtitle: "24/7 Service Available",
+      title: "Infrastructure Development",
+      subtitle: "Road and highway construction",
     },
     {
       image: "/images/carousel/slide4.jpeg",

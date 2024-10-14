@@ -91,7 +91,7 @@ const GalleryComponent: React.FC<GalleryComponentProps> = ({
 
 const Gallery = () => {
   return (
-    <main className="mt-24 overflow-x-hidden">
+    <main className="overflow-x-hidden">
       {/* Gallery Hero Image Section */}
       <section>
         <div className={`${styles.galleryBackgroundImg}`}>
